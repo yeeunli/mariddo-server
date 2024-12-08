@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  application:
+  name: mariddo
+
+  h2:
+    console:
+      enabled: true
+
+  # MySQL connection
+  datasource:
+    url: ${DB_URL} # .env
+    username: ${DB_USERNAME}  # .env
+    password: ${DB_PASSWORD}  # .env
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      pool-name: HikariCP
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+        create_empty_composites:
+          enabled: true
+      show-sql: true
+    database: mysql
+
+#logging:
+#  level:
+#    org.hibernate.SQL: debug
+
