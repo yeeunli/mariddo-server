@@ -30,7 +30,7 @@ spring:
       show-sql: true
     database: mysql
 
-#logging:
-#  level:
-#    org.hibernate.SQL: debug
+logging:
+  level:
+    org.hibernate.SQL: debug
 
