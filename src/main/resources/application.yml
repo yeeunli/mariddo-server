@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-  name: mariddo
+    name: mariddo
 
   h2:
     console:
@@ -32,13 +32,6 @@ spring:
 
 jwt:
   secret-key: ${JWT_SECRET_KEY:}
-  exp-time: ${JWT_EXP_TIME:3600} # 1시간
-  issuer: ${JWT_ISSUER:}
-
-#  token:
-#    refresh_token:
-#      secret: ${JWT_REFRESH_TOKEN_SECRET:}
-#      exp-time: ${JWT_REFRESH_TOKEN_EXP_TIME:2592000} # 30일
 
 logging:
   level:
